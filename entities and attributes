@@ -1,0 +1,47 @@
+Entities and Attributes
+1.	Sensor
+•	Attributes:
+o	Sensor ID(Primary Key)
+o	Location
+o	Type (Rainfall , Water Level , Temperature)
+o	Status (Active, Inactive) Flood Warning
+2.	
+•	Attributes:
+o	Warning ID (Primary Key)
+o	Sensor ID (Foreign Key)
+o	Warning Level (Low, Medium, High)
+o	Timestamp
+3.	Response Team
+•	Attributes:
+o	Team ID (Primary Key)
+o	Name
+o	Contact details
+o	Location
+4.	Resource
+•	Attributes:
+o	Resource ID (Primary Key)
+o	Type (Medical, Food, Shelter)
+o	Quantity
+o	Location
+5.	 Deployment
+•	Attributes:
+o	Deployment  ID (Primary Key)
+o	Team ID (Foreign Key)
+o	Resource ID (Foreign Key)
+o	Timestamp
+o	Status (Dispatched, En Route, Deployed, Completed)
+Relationships
+1.	Sensor to Flood Warning
+•	Type: One-to-Many
+•	Cardinality: A single Sensor can generate multiple Flood Warning
+•	Participation: Each FloodAlert must be associated with one Sensor.
+2.	Response Team to Deployment:
+•	Type: One-to-Many
+•	Cardinality: A Response Team can have many  Deployments.
+•	Participation: Each Deployment must be associated with one ResponseTeam.
+3.	Resource to Deployment:
+•	Type: One-to-Many
+•	Cardinality: A single Resource can be deployed many times.
+•	Participation: Each Deployment must be associated with one Resource.
+
+
