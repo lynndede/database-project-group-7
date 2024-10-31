@@ -31,35 +31,35 @@ HOW THIS PROJECT ADDRESS THEIR NEEDS:
 
 Entities and Attributes
 
-1.	Sensor refers to a device that collects data about environmental conditions related to potential flooding
+1.	Sensor refers to a device that gathers information  about environmental factors associated with possible floods
 •	Attributes:
 o	Sensor ID(Primary Key)
 o	Location
 o	Type (Rainfall , Water Level , Temperature)
 o	Status (Active, Inactive) Flood Warning
 
-2.  Warning  meaning that an alert informs the relevant stakeholders about the risk of floods based on data analysis
+2.  Warning ,based on data analysis,is an alert that notifies the appropriate stakeholders about the possibility of flooding.
 •	Attributes: 
 o	Warning ID (Primary Key)
 o	Sensor ID (Foreign Key)
 o	Warning Level (Low, Medium, High)
 o	Timestamp
 
-3.	Response Team meaning a group of people organized to handle disaster response and efforts incase of a flood
+3. Response team refers to a group  of peopleor organiztions charged with organising relief activities and responding to crises like floods
 •	Attributes:
 o	Team ID (Primary Key)
 o	Name
 o	Contact details
 o	Location
 
-4.	Resource meaning the assets and supplies required for disaster response efforts
+4.	Resource meaning the materials and equipment needed for disaster relief operations 
 •	Attributes:
 o	Resource ID (Primary Key)
 o	Type (Medical, Food, Shelter)
 o	Quantity
 o	Location
 
-5.	 Deployment meaning the process of installing,configuring and distributing the necessary resources or components necessary to monitor the flood prone areas and coordinate the response efforts effectively.
+5.	 Deployment is the process of installing, configuring, and allocating the components or resources required to efficiently coordinate response activities and monitor flood-prone areas
 •	Attributes:
 o	Deployment  ID (Primary Key)
 o	Team ID (Foreign Key)
@@ -74,12 +74,12 @@ Relationships
 •	Cardinality: A single Sensor can generate multiple Flood Warnings
 •	Participation: Each Floodwarning  must be associated with one Sensor entity.
 
-3.	Response Team to Deployment:
+2.	Response Team to Deployment:
 •	Type: One-to-Many relationship meaning that one response team can be related to many deployment entities
 •	Cardinality: A Response Team can have many  Deployments.
 •	Participation: Each Deployment must be associated with one ResponseTeam.
 
-4.	Resource to Deployment:
+3.	Resource to Deployment:
 •	Type: One-to-Many relationship in that one resource entity can be related to many instances of deployment entities
 •	Cardinality: A single Resource can be deployed many times.
 •	Participation: Each Deployment must be associated with one Resource.
