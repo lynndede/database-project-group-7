@@ -7,7 +7,7 @@ o	Type (Rainfall , Water Level , Temperature)
 o	Status (Active, Inactive) Flood Warning
 
 .
-2.	Warning
+2.Flood Warning
 •	Attributes:
 o	Warning ID (Primary Key)
 o	Sensor ID (Foreign Key)
@@ -26,6 +26,7 @@ o	Location
 4.	Resource
 •	Attributes:
 o	Resource ID (Primary Key)
+o Name
 o	Type (Medical, Food, Shelter)
 o	Quantity
 o	Location
@@ -35,9 +36,74 @@ o	Location
 •	Attributes:
 o	Deployment  ID (Primary Key)
 o	Team ID (Foreign Key)
+o Warning ID (Foreign Key)
 o	Resource ID (Foreign Key)
 o	Timestamp
 o	Status (Dispatched, En Route, Deployed, Completed)
+
+.
+6.  Deployment_Resource
+o deployment ID
+o resource ID
+o quantity Used
+
+.
+6. Environmental_Impact
+o Impact ID
+o Greenspace ID
+o noise level 
+o pollutants
+
+.
+7. Facility
+o Facility ID
+o Greenspace ID
+o facility type
+
+.
+8. Greenspace
+o Greenspace ID
+o Greenspace name 
+o Greenspace type
+o Greenspace area
+o Greenspace location
+o status
+
+.
+9. Location
+o Location ID (INT)
+o city 
+o neighbourhood
+o coordinates
+o population density
+o address
+
+.
+10. Maintenance
+o Maintenance ID 
+o Greenspace ID 
+o date
+o type
+o cost 
+o performed by
+
+.
+11. User
+o UserID 
+o gender
+o city 
+o visit frequency
+o fullname 
+o contact details
+
+.
+
+12. UserActivity
+o Activity ID 
+o Greenspace ID
+o description
+o duration
+o total time
 
 .
 Relationships
