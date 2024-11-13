@@ -107,17 +107,12 @@ o total time
 
 .
 Relationships
-1.	Sensor to Flood Warning
-•	Type: One-to-Many
-•	Cardinality: A single Sensor can generate multiple Flood Warning
-•	Participation: Each FloodAlert must be associated with one Sensor.
-2.	Response Team to Deployment:
-•	Type: One-to-Many
-•	Cardinality: A Response Team can have many  Deployments.
-•	Participation: Each Deployment must be associated with one ResponseTeam.
-3.	Resource to Deployment:
-•	Type: One-to-Many
-•	Cardinality: A single Resource can be deployed many times.
-•	Participation: Each Deployment must be associated with one Resource.
-
+1.One-to-Many (One Sensor can generate multiple Flood Warnings).
+2.One-to-Many (One Flood Warning can trigger multiple Deployments).
+3.One-to-Many (One Response Team can handle multiple Deployments).
+4.One-to-Many (One Greenspace can have multiple Environmental Impacts).
+5.One-to-Many (One Greenspace can have multiple Facilities).
+6.One-to-Many (One Location can have multiple Greenspaces).
+7.One-to-Many (One Greenspace can have multiple Maintenance records).
+8.One-to-Many (One Greenspace can have multiple User Activities).
 
