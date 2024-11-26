@@ -40,8 +40,6 @@ CREATE TABLE Facility(
  Facility_Type VARCHAR(50)
  );
  
- 
-    
 --Deployment TABLE
 CREATE TABLE Deployment(
     Deployment_ID INT PRIMARY KEY,
