@@ -32,4 +32,44 @@ CREATE TABLE ResponseTeam(
     Contact_Info VARCHAR(15),
     Location VARCHAR(100)
     );
+
+--Facility TABLE
+CREATE TABLE Facility(
+ Facility_ID INT, 
+ Greenspace_ID INT,
+ Facility_Type VARCHAR(50)
+ );
+ 
+ 
+    
+--Deployment TABLE
+CREATE TABLE Deployment(
+    Deployment_ID INT PRIMARY KEY,
+    Team_ID INT,
+    Warning_ID INT,
+    Deployment_Time DATE,
+    Status VARCHAR(20),
+    FOREIGN KEY(Deployment_ID)REFERENCES Deployment(Deployment_ID),
+    FOREIGN KEY (Warning_ID)REFERENCES FloodWarning(Warning_ID)
+    );
+    
+--Resource TABLE
+CREATE TABLE Resource(
+     Resource_ID INT PRIMARY KEY,
+     Resource_Name VARCHAR(100),
+      Quantity INT,
+      Status VARCHAR(20),
+      Location VARCHAR(100)
+      );
+      
+--Deployment_Resource Table
+CREATE TABLE Deployment_Resource(
+      Deployment_ID INT PRIMARY KEY,
+      Resource_ID INT,
+      Quality_Used INT,
+      Deployment_Time DATE,
+    FOREIGN KEY(Deployment_ID)REFERENCES Deployment(Deployment_ID)
+   );
+
+
     
