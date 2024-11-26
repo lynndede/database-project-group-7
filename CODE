@@ -1,0 +1,35 @@
+CREATE TABLE Sensor(
+  Sensor_ID INT PRIMARY KEY,      
+  Location VARCHAR(100) NOT NULL,                   
+   Status  VARCHAR(20) NOT NULL 
+   );
+    
+--FloodWarning Table
+CREATE TABLE FloodWarning(
+    Warning_ID INT PRIMARY KEY,
+    Sensor_ID INT,
+    Warning_Level VARCHAR(20),
+    Issued_AT DATE,
+    Description TEXT);
+    
+--UserActivity table
+CREATE TABLE UserActivity(
+    User_ID INT PRIMARY KEY,
+    Gender VARCHAR(10),
+    City VARCHAR(100),
+    Visit_Frequency INT,
+    Duration INT,
+    Full_Name VARCHAR (100),
+    Contact_Number VARCHAR(20),
+    Feedback TEXT
+    );
+    
+--ResponseTeam table
+CREATE TABLE ResponseTeam(
+    Team_ID INT PRIMARY KEY,
+    Team_Name VARCHAR(100),
+    Contact_Person VARCHAR (100),
+    Contact_Info VARCHAR(15),
+    Location VARCHAR(100)
+    );
+    
