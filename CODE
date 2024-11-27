@@ -170,6 +170,60 @@ VALUES(444,'Hawk eye','Jane Mbugua', '+254-70122292', 'Nairobi'),
 
 
 
+-Retrieve all data from FloodWarning
+SELECT * FROM FloodWarning;
+--Retrieve flood zone location with  a "High"
+SELECT Warning_ID, Sensor_ID, Warning_Level, Issued_At, Description
+From FloodWarning
+WHERE Warning_Level = 'High';
+
+--Update Description of a specific Sensor_ID
+Update FloodWarning
+SET Description = 'Water level is rising rapidly'
+WHERE Sensor_ID = 50874;
+
+
+--Delete a FloodWarning based on Sensor_ID
+DELETE FROM FloodWarning
+WHERE Sensor_ID  = 57890;
+
+--Select all records from FloodWarning
+SELECT * FROM FloodWarning;
+
+--Select all records from Sensor
+SELECT * FROM Sensor;
+
+--Select all records from Useractivity
+SELECT * FROM Useractivity;
+
+--Select all records from ResponseTeam
+SELECT * FROM ResponseTeam;
+
+--Select all records from Resource
+SELECT * FROM Resource;
+
+--Select all records from Maintenance
+SELECT * FROM Maintenance;
+
+--Select all records from Greenspace
+SELECT * FROM Greenspace;
+
+--Select all records from Facility
+SELECT * FROM Facility;
+
+--Select all records from Evironmental_Impact
+SELECT * FROM Environmental_Impact;
+
+--Retrieve all data from Deployment_Resource
+SELECT * FROM Deployment_Resource;
+
+
+
+
+
+--Retrieve all data from Deployment
+SELECT * FROM Deployment;
+
 
 
 
