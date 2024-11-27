@@ -219,7 +219,24 @@ SELECT * FROM Deployment_Resource;
 --Retrieve all data from Deployment
 SELECT * FROM Deployment;
 
+SELECT *
+FROM FloodWarning
+INNER JOIN Sensor ON FloodWarning.Sensor_ID = Sensor.Sensor_ID;
 
+SELECT *
+FROM Deployment
+LEFT OUTER JOIN ResponseTeam ON Deployment.Team_ID = ResponseTeam.Team_ID;
+
+SELECT Warning_ID AS ID, 'FloodWarning' AS Source
+FROM FloodWarning
+
+UNION ALL
+
+SELECT Deployment_ID AS ID, 'Deployment' AS Source
+FROM Deployment;
+
+
+	\dt
 
 
 
