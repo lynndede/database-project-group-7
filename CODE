@@ -73,6 +73,46 @@ CREATE TABLE Deployment_Resource(
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --Insert into FloodWarning table
 INSERT INTO FloodWarning(Warning_ID, Sensor_ID, Warning_Level, Issued_At, Description)
 VALUES
