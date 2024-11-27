@@ -73,6 +73,40 @@ CREATE TABLE Deployment_Resource(
 
 
 
+--Insert into FloodWarning table
+INSERT INTO FloodWarning(Warning_ID, Sensor_ID, Warning_Level, Issued_At, Description)
+VALUES
+     (1233, 50874,'High','2024-3-12','Water level is knee deep'),
+     (2378, 57890, 'Low','2024-5-25','Water level is uncle deep' ),
+     (2956, 17118, 'High', '2024-5-27', 'Water level is killing animals'),
+(2097, 19273, 'Low', '2024-5-28', 'Water level is slowly rising');
+
+--Insert into the Deployment table
+INSERT INTO Deployment( Deployment_ID, Team_ID, Warning_ID, Deployment_Time, Status )
+VALUES(133, 444, 1233,'2024-3-13','Deployed'),
+       (929, 2829,2097,'2024-3-15','Deployed'),
+       (928, 9202, 2956, '2024-3-18', 'Deployed');
+
+--Insert into Useractivity table
+INSERT INTO Useractivity (User_ID, Gender,City,Visit_Frequency,Duration,Full_Name, Contact_Number, Feedback)
+VALUES(13332, 'Female','Nairobi',24,3,'Samantha Pocket','072466678d', 'Satisfactory');
+
+--Insert into the Location table
+INSERT INTO Location(Location_ID, City, neighbourhood, coordinates, population_density,address)
+VALUES(736, 'Nairobi','Langata','399397d8',2738, '920d9'),
+      (939, 'Kajiado', 'Kajiado', '82988e8',8290,'019j9'),
+      (803, 'Nairobi','Mbagathi', '90842d0', 2930, '0870');
+
+--Insert into ResponseTeam table
+INSERT INTO ResponseTeam (Team_ID, Team_Name,Contact_Person,Contact_Info, Location )
+VALUES(444,'Hawk eye','Jane Mbugua', '+254-70122292', 'Nairobi'),
+      (837,'Jumpers', 'Willis Mbuthi', '+254-799852638','Kisumu' );
+
+
+
+
+
+
 
 
 
