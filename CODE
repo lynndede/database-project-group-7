@@ -67,4 +67,50 @@ CREATE TABLE Deployment_Resource(
       Deployment_Time DATE,
     FOREIGN KEY(Deployment_ID)REFERENCES Deployment(Deployment_ID)
    );
+--Maintenance table
+CREATE TABLE Maintenance(
+Maintenance_ID INT,
+Greenspace_ID INT,
+Time DATE,
+Description VARCHAR(50),
+Cost FLOAT,
+Performed_By VARCHAR (100)
+);
+
+--Greenspace Table
+CREATE TABLE Greenspace(
+Greenspace_ID INT,
+Name VARCHAR,
+Description VARCHAR (50),
+Area FLOAT,
+location_ID INT,
+Status VARCHAR(50),
+Created_Date DATE 
+);
+
+--Location table
+CREATE TABLE Location(
+Location_ID INT,
+City VARCHAR(100),
+neighbourhood VARCHAR(100),
+coordinates VARCHAR(100),
+population_density FLOAT,
+address VARCHAR(255)
+);
+
+--Environmental Impact
+CREATE TABLE Environmental_Impact(
+ImpactID INT,
+Greenspace_ID INT,
+Air_quality_index INT,
+Noise_Level INT,
+Pollutants VARCHAR(255),
+Biodiversity_Index INT
+);
+
+--Insert into sensor table new recording
+ INSERT INTO Sensor(Sensor_ID, Location, Status)
+ VALUES(50874,'Athi River', 'HIGH'),
+(82938, 'Mbagathi', 'Low'),
+       (8289, 'Langata', 'High');
 
